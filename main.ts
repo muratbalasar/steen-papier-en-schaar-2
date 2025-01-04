@@ -1,10 +1,13 @@
-input.onButtonPressed(Button.A, function () {
-    OnsGetal = steen
+function Gooi (getal: number) {
+    OnsGetal = getal
     WieWint()
     basic.pause(2000)
     ToonFiguur(OnsGetal)
     basic.pause(2000)
     ToonFiguur(CGetal)
+}
+input.onButtonPressed(Button.A, function () {
+    Gooi(steen)
 })
 function WieWint () {
     // basic.pause(3000)
@@ -28,12 +31,7 @@ function WieWint () {
     }
 }
 input.onButtonPressed(Button.AB, function () {
-    OnsGetal = schaar
-    WieWint()
-    basic.pause(2000)
-    ToonFiguur(OnsGetal)
-    basic.pause(2000)
-    ToonFiguur(CGetal)
+    Gooi(schaar)
 })
 function ToonFiguur (getal: number) {
     if (getal == 1) {
@@ -65,12 +63,7 @@ function ToonFiguur (getal: number) {
     }
 }
 input.onButtonPressed(Button.B, function () {
-    OnsGetal = papier
-    WieWint()
-    basic.pause(2000)
-    ToonFiguur(OnsGetal)
-    basic.pause(2000)
-    ToonFiguur(CGetal)
+    Gooi(papier)
 })
 let OnsGetal = 0
 let schaar = 0
